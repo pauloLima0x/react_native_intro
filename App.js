@@ -28,7 +28,7 @@ constructor(props) {
 // Retornando um número aleatório.
 
 retornaNumero() {
-  return Math.floor(Math.random() * 10)
+  return Math.floor(Math.random() * 61)
 }
 
 
@@ -41,9 +41,9 @@ render(){
       <Button title = { this.state.titulo }
         onPress= { () => {
             
-           // A lista deve conter menos de 10 elementos
+           // A lista deve conter menos de 60 elementos
 
-          if(this.state.sorteador.length < 10 ) {
+          if(this.state.sorteador.length < 60 ) {
 
             // Buscando um número aleatório
              var numero = this.retornaNumero()
@@ -64,7 +64,7 @@ render(){
                 this.adiciona(numero)
                 this.atualiza(numero)
                 // Ao fim do sorteio, mudar o texto do botão
-                if(this.state.sorteador.length == 9) {
+                if(this.state.sorteador.length == 59) {
                   this.setState( {titulo: this.state.titulo = "Fim do sorteio"})
 
                 }
